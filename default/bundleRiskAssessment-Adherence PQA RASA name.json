@@ -1,0 +1,1108 @@
+﻿{
+	"resourceType": "Bundle",
+	"type": "transaction",
+	"meta": {
+	  "lastUpdated": "2019-06-26T00:21:52.729Z"
+	},
+	"entry": [
+	  {
+		"fullUrl": "RiskAssessment/risk-adherence-pqa-rasa-name",
+		"request": {
+		  "method": "PUT",
+		  "url": "RiskAssessment/risk-adherence-pqa-rasa-name"
+		},
+		"resource": {
+		  "resourceType": "RiskAssessment",
+		  "id": "risk-adherence-pqa-rasa-name",
+		  "text": {
+			"status": "additional",
+			"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Current use of medication makes this cost savings inappropriate</p>\n    </div>"
+		  },
+		  "condition": {
+			"reference": "Condition/condition-adherence-pqa-rasa-name"
+		  }
+		}
+	  },
+	  {
+		"fullUrl": "Condition/condition-adherence-pqa-rasa-name",
+		"request": {
+		  "method": "PUT",
+		  "url": "Condition/condition-adherence-pqa-rasa-name"
+		},
+		"resource": {
+		  "resourceType": "Condition",
+		  "id": "condition-adherence-pqa-rasa-name",
+		  "text": {
+			"status": "generated",
+			"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Current use of medication makes this cost savings inappropriate</div>"
+		  },
+		  "stage": {
+			"assessment": [
+			  {
+				"reference": "Observation/age-identity"
+			  },
+			  {
+				"reference": "Observation/drug-pdc-pqa-rasa-name"
+			  }
+			]
+		  }
+		}
+	  },
+	  {
+		"fullUrl": "Observation/age-identity",
+		"request": {
+		  "method": "PUT",
+		  "url": "Observation/age-identity"
+		},
+		"resource": {
+		  "resourceType": "Observation",
+		  "id": "age-identity",
+		  "code": {
+			"coding": [
+			  {
+				"system": "http://loinc.org",
+				"code": "30525-0",
+				"display": "Age"
+			  }
+			],
+			"text": "Age"
+		  },
+		  "valueQuantity": {
+			"value": "65.0",
+			"system": "http://loinc.org"
+		  }
+		}
+	  },
+	  {
+		"fullUrl": "Observation/drug-pdc-pqa-rasa-name",
+		"request": {
+		  "method": "PUT",
+		  "url": "Observation/drug-pdc-pqa-rasa-name"
+		},
+		"resource": {
+		  "resourceType": "Observation",
+		  "id": "drug-pdc-pqa-rasa-name",
+		  "text": {
+			"status": "generated",
+			"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: 6323 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Glucose [Moles/volume] in Blood <span>(Details : {LOINC code '15074-8' = 'Glucose [Moles/volume] in Blood', given as 'Glucose [Moles/volume] in Blood'})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>effective</b>: 02/04/2013 9:30:10 AM --&gt; (ongoing)</p><p><b>issued</b>: 03/04/2013 3:30:10 PM</p><p><b>performer</b>: <a>A. Langeveld</a></p><p><b>value</b>: 6.3 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: High <span>(Details : {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation code 'H' = 'High', given as 'High'})</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>3.1 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>6.2 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></td></tr></table></div>"
+		  },
+		  "interpretation": {
+			"coding": [
+			  {
+				"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+				"code": "LX",
+				"display": "below threshold"
+			  },
+			  {
+				"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+				"code": "HX",
+				"display": "above threshold"
+			  }
+			]
+		  },
+		  "referenceRange": [
+			{
+			  "low": {
+				"value": "85"
+			  },
+			  "high": {
+				"value": "50"
+			  }
+			}
+		  ],
+		  "component": [
+			{
+			  "id": "component-drug-detection-analgesics-like-aliskiren",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like aliskiren"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-tekturna",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like tekturna"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-azilsartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like azilsartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-edarbi",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like edarbi"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-edarbyclor",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like edarbyclor"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-candesartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like candesartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-atacand",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like atacand"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-eprosartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like eprosartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-teveten",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like teveten"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-eprosartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like eprosartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-irbesartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like irbesartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-avapro",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like avapro"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-avalide",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like avalide"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-losartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like losartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-cozaar",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like cozaar"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-hyzaar",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like hyzaar"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-olmesartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like olmesartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-benicar",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like benicar"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-telmisartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like telmisartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-micardis",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like micardis"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-twynsta",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like twynsta"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-semintra",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like semintra"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-valsartan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like valsartan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-byvalson",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like byvalson"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-diovan",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like diovan"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-entresto",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like entresto"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-exforge",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like exforge"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-benazepril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like benazepril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-lotrel",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like lotrel"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-lotensin",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like lotensin"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-captopril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like captopril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-enalapril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like enalapril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-vasotec",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like vasotec"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-epaned",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like epaned"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-vaseretic",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like vaseretic"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-fosinopril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like fosinopril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-lisinopril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like lisinopril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-prinivil",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like prinivil"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-qbrelis",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like qbrelis"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-zestoretic",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like zestoretic"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-zestril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like zestril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-moexipril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like moexipril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-uniretic",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like uniretic"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-univasc",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like univasc"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-perindopril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like perindopril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-aceon",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like aceon"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-prestalia",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like prestalia"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-quinapril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like quinapril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-accupril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like accupril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-accuretic",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like accuretic"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-ramipril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like ramipril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-altace",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like altace"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-trandolapril",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like trandolapril"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-mavik",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like mavik"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			},
+			{
+			  "id": "component-drug-detection-analgesics-like-tarka",
+			  "code": {
+				"coding": [
+				  {
+					"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+					"display": "like tarka"
+				  }
+				]
+			  },
+			  "referenceRange": [
+				{
+				  "low": {
+					"value": "2.0"
+				  }
+				}
+			  ]
+			}
+		  ]
+		}
+	  }
+	]
+  }

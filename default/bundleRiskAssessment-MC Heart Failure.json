@@ -1,0 +1,416 @@
+{
+	"resourceType": "Bundle",
+	"type": "transaction",
+	"meta": {
+		"lastUpdated": "2019-06-26T01:59:14.554Z"
+	},
+	"entry": [
+		{
+			"fullUrl": "RiskAssessment/risk-drug-detection-multiple-component-heart-failure",
+			"request": {
+				"method": "PUT",
+				"url": "RiskAssessment/risk-drug-detection-multiple-component-heart-failure"
+			},
+			"resource": {
+				"resourceType": "RiskAssessment",
+				"id": "risk-drug-detection-multiple-component-heart-failure",
+				"text": {
+					"status": "additional",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Elderly patient taking ketorolac</p>\n    </div>"
+				},
+				"condition": {
+					"reference": "Condition/condition-drug-detection-multiple-component-heart-failure"
+				}
+			}
+		},
+		{
+			"fullUrl": "Condition/condition-drug-detection-multiple-component-heart-failure",
+			"request": {
+				"method": "PUT",
+				"url": "Condition/condition-drug-detection-multiple-component-heart-failure"
+			},
+			"resource": {
+				"resourceType": "Condition",
+				"id": "condition-drug-detection-multiple-component-heart-failure",
+				"stage": {
+					"assessment": [
+						{
+							"reference": "Observation/age-identity"
+						},
+						{
+							"reference": "Observation/drug-detection-multiple-component-heart-failure"
+						}
+					]
+				}
+			}
+		},
+		{
+			"fullUrl": "Observation/age-identity",
+			"request": {
+				"method": "PUT",
+				"url": "Observation/age-identity"
+			},
+			"resource": {
+				"resourceType": "Observation",
+				"id": "age-identity",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "30525-0",
+							"display": "Age"
+						}
+					],
+					"text": "Age"
+				},
+				"valueQuantity": {
+					"value": "65.0",
+					"system": "http://loinc.org"
+				}
+			}
+		},
+		{
+			"fullUrl": "Observation/drug-detection-multiple-component-heart-failure",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "drug-detection-multiple-component-heart-failure",
+				"code": {
+					"text": "drug-detection-multiple-component-heart-failure"
+				},
+				"related": [
+					{
+						"type": "has-member",
+						"target": {
+							"reference": "Observation/drug-detection-heart-failure"
+						}
+					},
+					{
+						"type": "has-member",
+						"target": {
+							"reference": "Observation/drug-detection-diabetes"
+						}
+					},
+					{
+						"type": "has-member",
+						"target": {
+							"reference": "Observation/drug-detection-depression"
+						}
+					},
+					{
+						"type": "has-member",
+						"target": {
+							"reference": "Observation/drug-detection-dyslipidemia"
+						}
+					}
+				],
+				"referenceRange": [
+					{
+						"low": {
+							"value": "2.0"
+						}
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "Observation/drug-detection-heart-failure",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "drug-detection-heart-failure",
+				"interpretation": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+							"code": "DET",
+							"display": "Detected"
+						}
+					]
+				},
+				"referenceRange": [
+					{
+						"low": {
+							"value": "2.0"
+						}
+					}
+				],
+				"component": [
+					{
+						"id": "component-drug-detection-heart-failure-metolazone",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like metolazone"
+								}
+							]
+						},
+						"referenceRange": [
+							{
+								"low": {
+									"value": "1.0"
+								}
+							}
+						]
+					},
+					{
+						"id": "component-drug-detection-heart-failure-thiazide-diuretic",
+						"code": {
+							"coding": [
+								{
+									"system": "https://www.nlm.nih.gov/epc",
+									"code": "N0000175419",
+									"display": "Thiazide Diuretic"
+								}
+							]
+						},
+						"referenceRange": [
+							{
+								"low": {
+									"value": "1.0"
+								}
+							}
+						]
+					},
+					{
+						"id": "component-drug-detection-heart-failure-thiazide-like-diuretic",
+						"code": {
+							"coding": [
+								{
+									"system": "https://www.nlm.nih.gov/epc",
+									"code": "N0000175420",
+									"display": "Thiazide-like Diuretic"
+								}
+							]
+						},
+						"referenceRange": [
+							{
+								"low": {
+									"value": "1.0"
+								}
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "Observation/drug-detection-diabetes",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "drug-detection-diabetes",
+				"interpretation": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+							"code": "DET",
+							"display": "Detected"
+						}
+					]
+				},
+				"referenceRange": [
+					{
+						"low": {
+							"value": "2.0"
+						}
+					}
+				],
+				"related": [
+					{
+						"type": "has-member",
+						"target": {
+							"reference": "Observation/drug-detection-diabetes-except"
+						}
+					}
+				],
+				"component": [
+					{
+						"id": "drug-detection-diabetes-include-biguanide",
+						"code": {
+						   "coding": [
+							  {
+								 "system": "https://www.nlm.nih.gov/epc",
+								 "display": "Biguanide"
+							  }
+						   ]
+						}
+					},
+					{
+						"id": "component-drug-detection-analgesics-like-freestyle",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like freestyle"
+								}
+							]
+						}
+					},
+					{
+						"id": "component-drug-detection-analgesics-like-glucocard",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like glucocard"
+								}
+							]
+						}
+					},
+					{
+						"id": "drug-detection-diabetes-include-Hypoglycemics",
+						"code": {
+						   "coding": [
+							  {
+								 "system": "https://www.nlm.nih.gov/epc",
+								 "code": "N0000175913",
+								 "display": "Dipeptidyl Peptidase 4 Inhibitor"
+							  }
+						   ]
+						}
+					}					
+				]
+			}
+		},
+		{
+			"fullUrl": "Observation/drug-detection-diabetes-except",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "drug-detection-diabetes-except",
+				"interpretation": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+							"code": "NEG",
+							"display": "Negative"
+						}
+					]
+				},
+				"referenceRange": [
+					{
+						"low": {
+							"value": "2.0"
+						}
+					}
+				],
+				"component": [
+					{
+						"id": "component-drug-detection-except-enfamil",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like enfamil"
+								}
+							]
+						}
+					}
+				]
+			}
+		},		
+		{
+			"fullUrl": "Observation/drug-detection-depression",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "drug-detection-depression",
+				"interpretation": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+							"code": "DET",
+							"display": "Detected"
+						}
+					]
+				},
+				"referenceRange": [
+					{
+						"low": {
+							"value": "2.0"
+						}
+					}
+				],
+				"component": [
+					{
+						"id": "component-drug-detection-depression-like-serzone",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like serzone"
+								}
+							]
+						}
+					},
+					{
+						"id": "component-drug-detection-depression-like nefazodone",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like nefazodone"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "Observation/drug-detection-dyslipidemia",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "drug-detection-dyslipidemia",
+				"interpretation": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+							"code": "DET",
+							"display": "Detected"
+						}
+					]
+				},
+				"referenceRange": [
+					{
+						"low": {
+							"value": "2.0"
+						}
+					}
+				],
+				"component": [
+					{
+						"id": "component-drug-detection-depression-like-lovaza",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like lovaza"
+								}
+							]
+						}
+					},
+					{
+						"id": "component-drug-detection-depression-like-advicor",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like advicor"
+								}
+							]
+						}
+					},
+					{
+						"id": "component-drug-detection-depression-like-niaspan",
+						"code": {
+							"coding": [
+								{
+									"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+									"display": "like niaspan"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+}
