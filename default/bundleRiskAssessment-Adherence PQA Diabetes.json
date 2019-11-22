@@ -1,0 +1,321 @@
+﻿{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "meta": {
+    "lastUpdated": "2019-06-26T00:21:52.729Z"
+  },
+  "entry": [
+    {
+      "fullUrl": "RiskAssessment/risk-adherence-pqa-diabetes",
+      "request": {
+        "method": "PUT",
+        "url": "RiskAssessment/risk-adherence-pqa-diabetes"
+      },
+      "resource": {
+        "resourceType": "RiskAssessment",
+        "id": "risk-adherence-pqa-diabetes",
+        "text": {
+          "status": "additional",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>Current use of medication makes this cost savings inappropriate</p>\n    </div>"
+        },
+        "condition": {
+          "reference": "Condition/condition-adherence-pqa-diabetes"
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/condition-adherence-pqa-diabetes",
+      "request": {
+        "method": "PUT",
+        "url": "Condition/condition-adherence-pqa-diabetes"
+      },
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-adherence-pqa-diabetes",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Current use of medication makes this cost savings inappropriate</div>"
+        },
+        "stage": {
+          "assessment": [
+            {
+              "reference": "Observation/gender-identity"
+            },
+            {
+              "reference": "Observation/age-identity"
+            },
+            {
+              "reference": "Observation/drug-pdc-pqa-diabetes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/gender-identity",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/gender-identity"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "gender-identity",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76691-5",
+              "display": "Gender identity"
+            }
+          ],
+          "text": "Gender identity"
+        },
+        "valueQuantity": {
+          "value": "2.0",
+          "system": "http://loinc.org",
+          "code": "Identifies as female"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/age-identity",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/age-identity"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "age-identity",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30525-0",
+              "display": "Age"
+            }
+          ],
+          "text": "Age"
+        },
+        "valueQuantity": {
+          "value": "55.0",
+          "system": "http://loinc.org"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/drug-pdc-pqa-diabetes",
+      "request": {
+        "method": "PUT",
+        "url": "Observation/drug-pdc-pqa-diabetes"
+      },
+      "resource": {
+        "resourceType": "Observation",
+        "id": "drug-pdc-pqa-diabetes",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: 6323 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Glucose [Moles/volume] in Blood <span>(Details : {LOINC code '15074-8' = 'Glucose [Moles/volume] in Blood', given as 'Glucose [Moles/volume] in Blood'})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>effective</b>: 02/04/2013 9:30:10 AM --&gt; (ongoing)</p><p><b>issued</b>: 03/04/2013 3:30:10 PM</p><p><b>performer</b>: <a>A. Langeveld</a></p><p><b>value</b>: 6.3 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: High <span>(Details : {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation code 'H' = 'High', given as 'High'})</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>3.1 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>6.2 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></td></tr></table></div>"
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+              "code": "LX",
+              "display": "below threshold"
+            },
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+              "code": "HX",
+              "display": "above threshold"
+            }
+          ]
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": "85"
+            },
+            "high": {
+              "value": "50"
+            }
+          }
+        ],
+        "component": [
+          {
+            "id": "component-drug-pdc-pqa-diabetes-biguanides",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BA",
+                  "display": "biguanides"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          },
+          {
+            "id": "component-drug-pdc-pqa-diabetes-sulfonylureas",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BB",
+                  "display": "sulfonylureas"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          },
+          {
+            "id": "component-drug-pdc-pqa-diabetes-thiazolidinediones",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BG",
+                  "display": "thiazolidinediones"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          },
+          {
+            "id": "component-drug-pdc-pqa-diabetes-dpp-4",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BH",
+                  "display": "dpp-4"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          },
+          {
+            "id": "component-drug-pdc-pqa-diabetes-glp-1",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BJ",
+                  "display": "glp-1"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          },
+          {
+            "id": "component-drug-pdc-pqa-diabetes-meglitinides",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BX",
+                  "display": "meglitinides"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          },
+          {
+            "id": "component-drug-pdc-pqa-diabetes-sglt2",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://www.whocc.no/atc_ddd_index/",
+                  "code": "A10BK",
+                  "display": "sglt2"
+                }
+              ]
+            },
+            "referenceRange": [ { "low": { "value": "2.0" } } ]
+          }
+        ]
+      }
+    },
+	   {
+		  "fullUrl": "Observation/component-drug-pdc-pqa-diabetes-insulin",
+		  "request": {
+			 "method": "PUT",
+			 "url": "Observation/component-drug-pdc-pqa-diabetes-insulin"
+		  },
+		  "resource": {
+			 "resourceType": "Observation",
+			 "id": "component-drug-pdc-pqa-diabetes-insulin",
+			 "text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f001</p><p><b>identifier</b>: 6323 (OFFICIAL)</p><p><b>status</b>: final</p><p><b>code</b>: Glucose [Moles/volume] in Blood <span>(Details : {LOINC code '15074-8' = 'Glucose [Moles/volume] in Blood', given as 'Glucose [Moles/volume] in Blood'})</span></p><p><b>subject</b>: <a>P. van de Heuvel</a></p><p><b>effective</b>: 02/04/2013 9:30:10 AM --&gt; (ongoing)</p><p><b>issued</b>: 03/04/2013 3:30:10 PM</p><p><b>performer</b>: <a>A. Langeveld</a></p><p><b>value</b>: 6.3 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: High <span>(Details : {http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation code 'H' = 'High', given as 'High'})</span></p><h3>ReferenceRanges</h3><table><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>3.1 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>6.2 mmol/l<span> (Details: UCUM code mmol/L = 'mmol/L')</span></td></tr></table></div>"
+			 },
+			 "interpretation": {
+				"coding": [
+				   {
+					  "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+					  "code": "ND",
+					  "display": "Not Detected"
+				   }
+				]
+			 },
+			 "component": [
+				{
+					"id": "component-drug-pdc-pqa-diabetes-insulin-1",
+				   "code": {
+					  "coding": [
+						 {
+              "system": "https://www.whocc.no/atc_ddd_index/",
+              "code": "A10AB",
+              "display": "Insulins and analogues for injection, fast-acting"
+						 }
+					  ]
+				   },
+           "referenceRange": [
+           {
+             "low": {
+             "value": "1.0"
+             }
+           }
+           ]
+				},
+				{
+					"id": "component-drug-pdc-pqa-diabetes-insulin-2",
+				   "code": {
+					  "coding": [
+						 {
+              "system": "https://www.whocc.no/atc_ddd_index/",
+              "code": "A10AC",
+              "display": "Insulins and analogues for injection, intermediate-acting"
+						 }
+					  ]
+				   },
+           "referenceRange": [
+           {
+             "low": {
+             "value": "1.0"
+             }
+           }
+           ]
+				},
+				{
+					"id": "component-drug-pdc-pqa-diabetes-insulin-3",
+				   "code": {
+					  "coding": [
+						 {
+              "system": "https://www.whocc.no/atc_ddd_index/",
+              "code": "A10AD",
+              "display": "Insulins and analogues for injection, combined"
+						 }
+					  ]
+				   },
+           "referenceRange": [
+           {
+             "low": {
+             "value": "1.0"
+             }
+           }
+           ]
+				}
+			 ]
+		  }
+    }
+  ]
+}
